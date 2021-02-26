@@ -12,7 +12,7 @@ Refer to this page for the YANG Suite installation guidance https://github.com/C
 
 Background
 
-IOS XE Release: 17.3
+IOS XE Release: 17.4
 
 
 
@@ -28,13 +28,13 @@ Conclusion
 
 
 
-Introduction to NETCONF/YANG
+#Introduction to NETCONF/YANG
 
 In this section we will look at YANG data models, why we need them, and how to find them. We will use a tool called YangSuite to find the data models we need, and we will write Python scripts using the models.
 
 Login Information
 
-Enable NETCONF/YANG
+#Enable NETCONF/YANG
 
 Before we start using YANG Suite to look at the data models on our switches, we need to run through a few steps to enable NETCONF, which is not on by default.
 
@@ -42,36 +42,36 @@ Open a telnet session to your C9300 switch and Verify AAA and NETCONF are alread
 
 C9300#sh run | sec aaa
 
-aaa new-model 
+aaa new-model
 
-aaa authentication login default local 
+aaa authentication login default local
 
-aaa authorization exec default local 
+aaa authorization exec default local
 
-aaa session-id common 
+aaa session-id common
 
-C9300#sh run | sec vty  
+C9300#sh run | sec vty
 
-line vty 0 4  
+line vty 0 4
 
-exec-timeout 0 0 
+exec-timeout 0 0
 
- length 0  
-
-transport input all 
-
-line vty 5 15  
-
-exec-timeout 0 0  
-
-length 0  
+ length 0
 
 transport input all
 
-C9300#sh run | i netconf 
+line vty 5 15
+
+exec-timeout 0 0
+
+length 0
+
+transport input all
+
+C9300#sh run | i netconf
 
 netconf-yang
 
-C9300#show run | i username 
+C9300#show run | i username
 
 username admin privilege 15 secret 9 ....
