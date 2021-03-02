@@ -34,7 +34,7 @@ In this section we will look at YANG data models, why we need them, and how to f
 
 ## Login Information
 
-Enable NETCONF/YANG
+### Enable NETCONF/YANG
 
 Before we start using YANG Suite to look at the data models on our switches, we need to run through a few steps to enable NETCONF, which is not on by default.
 
@@ -97,7 +97,7 @@ Once logged in, you'll end up at the mail YANG Suite application window:
 
 YANG Suite allows you to work with different YANG Modules repositories. This is very useful especially if working with different device releases at the same time.
 
-### Configure YANG Suite to connect to a device
+### Step 1: Configure YANG Suite to connect to a device
 
 >Configure the device profile in Cisco YANG Suite
 
@@ -121,17 +121,17 @@ Password:
 *Note: Make sure to select **"Device support NETCONF"** and **"Skip SSH key validation for this device"** since the device doesn't have a consistent SSH key.*
 
 
-Click on **Create Profile** when finished
+Click on **"Create Profile"** when finished
 
->PLACEHOLDER FOR THE IMAGE
+![](imgs/image3.png)
 
-Once you have entered the information, you can click the **"Check Connectivity"** button.
+Once you have entered the information, you can click the **"Check selected device's reachability"** button.
 
->PLACEHOLDER FOR THE IMAGE
+![](imgs/image4.png)
 
-### Download YANG models from the device
+### Step 2: Download YANG models from the device
 
-> Create a new YANG module Repository
+#### Create a new YANG module Repository
 
 From the menu at the left side of the page select **"Setup"** > **"YANG files and repositories"**.
 
@@ -154,7 +154,7 @@ We are going to download the whole schema list from the device to our newly adde
 
 ![](imgs/image6.png)
 
->Create a YANG module Set
+#### Create a YANG module Set
 
 Next, you will create a YANG model set. A YANG set is a subset of a YANG repository, consisting of a set of modules of interest and any necessary dependencies they have. A YANG set could be as large as the entire repository's contents, but it's often more efficient to narrow the set down to only the models that we're really interested in.
 
@@ -185,7 +185,7 @@ YANG Suite automatically runs a validation check to make sure all the modules de
 All the IOS XE Native modes are displayed in the box on the left.
 
 
-### Explore YANG Models
+### Step 3: Explore YANG Models
 
 Now that we have a YANG model repository and have identified a YANG model subset of interest, let's explore the data model. From the menu at the left side of the page, select **"Explore" > "YANG"**.
 
@@ -194,6 +194,37 @@ Now that we have a YANG model repository and have identified a YANG model subset
 * Type **“interface”** in the **"Select YANG modules(s)"** box and select the **“Cisco-IOS-XE-interfaces-oper“** module.
 * Click on the **"Load module(s)"** button and expand the **“Cisco-IOS-XE-interfaces-oper”** module by clicking on the triangle on the left.
 
-After a moment, the left column will be populated with a tree view of the contents of this module. Initially the tree view shows only the module itself, but you can click the triangle icon next to it to expand the tree. Go ahead and expand various parts of the tree
+After a moment, the left column will be populated with a tree view of the contents of this module. Initially the tree view shows only the module itself, but you can click the triangle icon next to it to expand the tree.
+
+Go ahead and expand various parts of the tree.
 
 ![](imgs/image10.png)
+
+Two important pieces of YANG model metadata are the **Xpath** and the **Prefix**. These fields are used with Model Driven Telemetry to retrieve information with. If a telemetry subscription was to be created based on the IOS XE interfaces YANG data model, the **Xpath** of **“/interfaces/interface”** and **“interfaces-ios-xe-oper”** would be used to retrieve and publish information from those models.
+
+### Step 4: Build and send NETCONF messages
+
+YANG Suite allows you to interact with the devices using most of the programmatic
+interfaces: NETCONF, RESTCONF, gNMI, and gRPC. This step uses the NETCONF
+programmatic interface:
+Using a NETCONF get-config RPC to modify device configuration
+
+* Click on the Protocols menu and then NETCONF on the left pane
+
+* Select **"IOS XE - IETF"** module set from the **"Select a YANG set"** drop-down menu
+* Type **"ietf-Interface"** in the Module(s) box, select the **"ietf-Interfaces"** module
+* Select the **"C9300"** from the drop-down list
+* Click on the **"Load Module(s)"** button
+
+We just want to get all configuration data about the Loopback interface on our device, so expand the YANG tree and click in the **"Value"** column next to the interfaces container to add a value – **“Loopback0”**
+
+*Note: Be sure not to put a space between "Loopback" and "0"!*
+
+![](imgs/image11.png)
+
+Click **"Build RPC"** and the corresponding NETCONF RPC will be constructed for you.
+
+
+![](imgs/image12.png)
+
+Now click **"Run RPC(s)"**, and a new window will open showing the NETCONF session to the device, including your RPC being sent and the reply from the device describing the current interface configuration.
