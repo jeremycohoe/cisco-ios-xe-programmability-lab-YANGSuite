@@ -153,3 +153,16 @@ We are going to download the whole schema list from the device to our newly adde
 * Click on **"Get schema list"** > **"Select all"** > **"Download selected schemas"**.
 
 ![](imgs/image6.png)
+
+>Create a YANG module Set
+
+Next, you will create a YANG model set. A YANG set is a subset of a YANG repository, consisting of a set of modules of interest and any necessary dependencies they have. A YANG set could be as large as the entire repository's contents, but it's often more efficient to narrow the set down to only the models that we're really interested in.
+
+From the menu at the left side of the page select **"Setup"** > **"YANG module sets"**
+
+* Click on **"New YANG set"**.
+
+* Type in name for new YANG set **“IOS XE Switching – Cisco Native”**.
+* Click on **"Create YANG set"**.
+
+![](imgs/image7.png)
