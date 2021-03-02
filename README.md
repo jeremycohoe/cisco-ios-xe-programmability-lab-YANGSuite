@@ -1,4 +1,4 @@
-# YANG Suite core Django application.
+# YANG Suite
 
 Capable of dynamic discovery of installed application plugins. Provides common library APIs for logging, filesystem access, GUI appearance and behavior, and client-server communication.
 
