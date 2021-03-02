@@ -212,6 +212,8 @@ interfaces: NETCONF, RESTCONF, gNMI, and gRPC. This step uses the NETCONF
 programmatic interface:
 Using a NETCONF get-config RPC to modify device configuration
 
+*Note: We have already created a **IOS XE - IETF set** and downloaded the required schema list for you to use in this lab
+
 * Click on the Protocols menu and then NETCONF on the left pane
 
 * Select **"IOS XE - IETF"** module set from the **"Select a YANG set"** drop-down menu
