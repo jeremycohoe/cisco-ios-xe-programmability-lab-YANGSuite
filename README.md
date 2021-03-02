@@ -123,11 +123,12 @@ Password:
 
 Click on **"Create Profile"** when finished
 
-![](imgs/image3.png)
+
+<img src="imgs/image3.png" width="300px" height="500px">
 
 Once you have entered the information, you can click the **"Check selected device's reachability"** button.
 
-![](imgs/image4.png)
+![](imgs/image4.jpg)
 
 ### Step 2: Download YANG models from the device
 
