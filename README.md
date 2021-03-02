@@ -153,6 +153,8 @@ We are going to download the whole schema list from the device to our newly adde
 * Select device profile from the drop-down **“C9300”**.
 * Click on **"Get schema list"** > **"Select all"** > **"Download selected schemas"**.
 
+* Note: Wait for a couple of minutes for all the models to be dowloaded to our repository. It might take some time since we are downloading the whole schema list
+
 ![](imgs/image6.png)
 
 #### Create a YANG module Set
