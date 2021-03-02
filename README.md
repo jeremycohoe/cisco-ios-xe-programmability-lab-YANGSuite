@@ -166,3 +166,34 @@ From the menu at the left side of the page select **"Setup"** > **"YANG module s
 * Click on **"Create YANG set"**.
 
 ![](imgs/image7.png)
+
+Now we will add YANG Modules to the newly created set.
+
+* In the box on the right, filter for **“Cisco-IOS-XE”** native modules.
+
+* Select all modules from the right box.
+* Click on **"Add selected"**
+
+![](imgs/image8.png)
+
+After you add selected YANG modules to the **IOS XE Switching-Cisco Native** set, click on **"Locate and add missing dependencies"** in the Missing dependencies box on the right side.
+
+
+![](imgs/image9.png)
+
+YANG Suite automatically runs a validation check to make sure all the modules dependencies are met and provides an automatic remediation in case some dependencies are missing.
+All the IOS XE Native modes are displayed in the box on the left.
+
+
+### Explore YANG Models
+
+Now that we have a YANG model repository and have identified a YANG model subset of interest, let's explore the data model. From the menu at the left side of the page, select **"Explore" > "YANG"**.
+
+* Select **"IOS XE Switching – Cisco Native"** from the Select a YANG set drop down menu.
+
+* Type **“interface”** in the **"Select YANG modules(s)"** box and select the **“Cisco-IOS-XE-interfaces-oper“** module.
+* Click on the **"Load module(s)"** button and expand the **“Cisco-IOS-XE-interfaces-oper”** module by clicking on the triangle on the left.
+
+After a moment, the left column will be populated with a tree view of the contents of this module. Initially the tree view shows only the module itself, but you can click the triangle icon next to it to expand the tree. Go ahead and expand various parts of the tree
+
+![](imgs/image10.png)
