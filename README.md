@@ -153,7 +153,7 @@ We are going to download the whole schema list from the device to our newly adde
 * Select device profile from the drop-down **“C9300”**.
 * Click on **"Get schema list"** > **"Select all"** > **"Download selected schemas"**.
 
-*Note: Wait for a couple of minutes for all the models to be dowloaded to our repository. It might take some time since we are downloading the whole schema list
+*Note: Wait for a couple of minutes for all the models to be dowloaded to our repository. It might take some time since we are downloading the whole schema list*
 
 ![](imgs/image6.png)
 
@@ -212,7 +212,7 @@ interfaces: NETCONF, RESTCONF, gNMI, and gRPC. This step uses the NETCONF
 programmatic interface:
 Using a NETCONF get-config RPC to modify device configuration
 
-*Note: We have already created a **IOS XE - IETF set** and downloaded the required schema list for you to use in this lab
+*Note: We have already created a **IOS XE - IETF set** and downloaded the required schema list for you to use in this lab*
 
 * Click on the Protocols menu and then NETCONF on the left pane
 
