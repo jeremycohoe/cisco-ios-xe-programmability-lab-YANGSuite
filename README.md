@@ -1,4 +1,4 @@
-# YANG Suite
+# YANG Suite core Django application.
 
 Capable of dynamic discovery of installed application plugins. Provides common library APIs for logging, filesystem access, GUI appearance and behavior, and client-server communication.
 
@@ -87,9 +87,9 @@ At the beginning of this lab we already have verified AAA and NETCONF on the swi
 
 > Access the POD# that you have been assigned to.
 
-* Open a Firefox web browser and access YANG Suite at **localhost**
+* Open a Firefox web browser and access YANG Suite at **http://10.1.1.3:8480/**
 
-* Login using the provided credentials **(admin/C1sc0dna)**
+* Login using the provided credentials **(admin/Cisco123)**
 
 Once logged in, you'll end up at the mail YANG Suite application window:
 
@@ -153,8 +153,6 @@ We are going to download the whole schema list from the device to our newly adde
 * Select device profile from the drop-down **“C9300”**.
 * Click on **"Get schema list"** > **"Select all"** > **"Download selected schemas"**.
 
-*Note: Wait for a couple of minutes for all the models to be dowloaded to our repository. It might take some time since we are downloading the whole schema list*
-
 ![](imgs/image6.png)
 
 #### Create a YANG module Set
@@ -212,8 +210,6 @@ interfaces: NETCONF, RESTCONF, gNMI, and gRPC. This step uses the NETCONF
 programmatic interface:
 Using a NETCONF get-config RPC to modify device configuration
 
-*Note: We have already created a **IOS XE - IETF set** and downloaded the required schema list for you to use in this lab*
-
 * Click on the Protocols menu and then NETCONF on the left pane
 
 * Select **"IOS XE - IETF"** module set from the **"Select a YANG set"** drop-down menu
@@ -245,6 +241,8 @@ Inspecting the configuration is a good start, but we want to actually change the
 
 ![](imgs/image14.png)
 
+![](imgs/image19.png)
+
 We're going to set the description on the **Loopback interface** to show that we were here.
 
 Expand the <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">interfaces</span> container in the tree view so that the <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">description</span> leaf is now visible.
@@ -263,9 +261,11 @@ Now click **"Run RPC(s)"** again, and a new window will open showing the **NETCO
 
 Next, let's add a targeted <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">get-config</span> RPC to check that our configuration change actually took effect.
 
-First, click the **"Clear RPCs"** button to erase the RPC we just ran, as we don't need it right now. Then change the NETCONF Operation to <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">get-config</span>, make sure the <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">running</span> datastore is selected, and enter **"Loopback0"** value as the leaf name to get-config operation.
+First, click the **"Clear RPCs"** and **"Clear Values and Operations"** buttons to erase the RPC we just ran, as we don't need it right now. Then change the NETCONF Operation to <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">get-config</span>, make sure the <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">running</span> datastore is selected, and enter **"Loopback0"** value as the leaf name to get-config operation.
 
+![](imgs/image19.png)
 ![](imgs/image17.png)
+
 
 Perform the same steps as before. Click **"Build RPC"** and **“Run RPC”**.
 
