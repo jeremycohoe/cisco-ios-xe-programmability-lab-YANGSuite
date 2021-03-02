@@ -87,21 +87,21 @@ At the beginning of this lab we already have verified AAA and NETCONF on the swi
 
 > Access the POD# that you have been assigned to.
 
-* Open a Firefox web browser and access YANG Suite at **localhost**
+* Open a Firefox web browser and access YANG Suite at **http://10.1.1.3:8480/**
 
-* Login using the provided credentials **(admin/C1sc0dna)**
+* Login using the provided credentials **(admin/Cisco123)**
 
 Once logged in, you'll end up at the mail YANG Suite application window:
 
->PLACEHOLDER FOR THE IMAGE
+![](imgs/image1.png)
 
 YANG Suite allows you to work with different YANG Modules repositories. This is very useful especially if working with different device releases at the same time.
 
 ### Step 1: Configure YANG Suite to connect to a device
 
->Configure the device profile in Cisco YANG Suite
+#### Configure the device profile in Cisco YANG Suite
 
-Navigate to **Setup -> Device Profiles** and click on **Create new device**
+Navigate to **"Setup" -> "Device Profiles"** and click on **"Create new device"**
 
 ![](imgs/image2.png)
 
@@ -110,11 +110,11 @@ In the pop up window type in the following information as shown below
 ```
 Profile Name: C9300
 
-Address:
+Address: 10.1.1.5
 
-Username:
+Username: admin
 
-Password:
+Password: Cisco123
 ```
 
 
@@ -229,3 +229,51 @@ Click **"Build RPC"** and the corresponding NETCONF RPC will be constructed for 
 ![](imgs/image12.png)
 
 Now click **"Run RPC(s)"**, and a new window will open showing the NETCONF session to the device, including your RPC being sent and the reply from the device describing the current interface configuration.
+
+![](imgs/image13.png)
+
+Just like that, you've built and sent a **NETCONF RPC!**
+
+
+#### Using a NETCONF <span style="color:#B73650; background-color:#F8F2F4;">edit-config</span> RPC to modify device configuration
+
+Inspecting the configuration is a good start, but we want to actually change the configuration - making our mark, as it were. First, click the **"Clear RPCs"** button to erase the RPC we just ran, as we don't need it right now. Then, switch the NETCONF operation to <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">edit-config</span>.
+
+![](imgs/image14.png)
+
+We're going to set the description on the **Loopback interface** to show that we were here.
+
+Expand the <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">interfaces</span> container in the tree view so that the <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">description</span> leaf is now visible.
+
+* Click on the **"Value"** column next to the <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">name</span> leaf, and enter **"Loopback0"**.
+
+* Click on the **"Value"** column next to the <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">description</span> leaf, and enter a suitable message like **“Cisco Live 2021”**.
+* Click on the "Operation" column next to the <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">description</span> leaf, and select <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">replace</span>.
+Click **"Build RPC"** to construct your <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">edit-config </span>  RPC.
+
+![](imgs/image15.png)
+
+Now click **"Run RPC(s)"** again, and a new window will open showing the **NETCONF** session to the device.
+
+![](imgs/image16.png)
+
+Next, let's add a targeted <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">get-config</span> RPC to check that our configuration change actually took effect.
+
+First, click the **"Clear RPCs"** button to erase the RPC we just ran, as we don't need it right now. Then change the NETCONF Operation to <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">get-config</span>, make sure the <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">running</span> datastore is selected, and enter **"Loopback0"** value as the leaf name to get-config operation.
+
+![](imgs/image17.png)
+
+Perform the same steps as before. Click **"Build RPC"** and **“Run RPC”**.
+
+You will see each RPC and its corresponding response. If all goes well, you will see that your configuration change has taken effect!
+
+
+![](imgs/image18.png)
+
+Just like that, you've built and confirmed the <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">edit-config</span> **NETCONF** RPC operation!
+
+## Conclusion
+
+In this module the **YANG Suite** tooling was introduced and used to explore the **NETCONF** programmatic interfaces as well as to understand details of the associated with the **YANG data models**.
+
+You have learned how to Launch and connect to **YANG Suite**. How to configure **YANG Suite** to connect to a router or switch. How to download **YANG models** from a device using **NETCONF**. How to explore and navigate the **YANG models** using the **YANG Suite GUI** and how to Construct simple **NETCONF** messages and transmit them to a device using the **YANG Suite GUI**.
