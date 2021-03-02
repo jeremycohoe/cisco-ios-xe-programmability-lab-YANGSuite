@@ -103,8 +103,6 @@ YANG Suite allows you to work with different YANG Modules repositories. This is 
 
 Navigate to **Setup -> Device Profiles** and click on **Create new device**
 
->PLACEHOLDER FOR THE IMAGE
-
 ![](imgs/image2.png)
 
 In the pop up window type in the following information as shown below
@@ -137,10 +135,21 @@ Once you have entered the information, you can click the **"Check Connectivity"*
 
 From the menu at the left side of the page select **"Setup"** > **"YANG files and repositories"**.
 
-* Click on **"New repository"**
+* Click on **"New repository"**.
 
-* Enter the new repository name **"IOS XE Switching"**
+* Enter the new repository name **"IOS XE Switching"**.
 
-* Click on **"Create repository"**
+* Click on **"Create repository"**.
 
 ![](imgs/image5.png)
+
+The newly created repository is automatically selected from the **"Select a YANG module repository"**
+
+We are going to download the whole schema list from the device to our newly added repository.
+
+* Navigate to the **"NETCONF"** tab
+
+* Select device profile from the drop-down **“C9300”**.
+* Click on **"Get schema list"** > **"Select all"** > **"Download selected schemas"**.
+
+![](imgs/image6.png)
