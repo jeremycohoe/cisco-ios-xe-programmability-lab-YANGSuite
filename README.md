@@ -91,12 +91,21 @@ At the beginning of this lab we already have verified AAA and NETCONF on the swi
 
 * Login using the provided credentials **(admin/C1sc0dna)**
 
+Once logged in, you'll end up at the mail YANG Suite application window:
+
+>PLACEHOLDER FOR THE IMAGE
+
 YANG Suite allows you to work with different YANG Modules repositories. This is very useful especially if working with different device releases at the same time.
 
-> First, we will add the device to the YANG Suite.
+### Configure YANG Suite to connect to a device
+
+>Configure the device profile in Cisco YANG Suite
 
 Navigate to **Setup -> Device Profiles** and click on **Create new device**
 
+>PLACEHOLDER FOR THE IMAGE
+
+![](imgs/image2.png)
 
 In the pop up window type in the following information as shown below
 
@@ -111,17 +120,27 @@ Password:
 ```
 
 
-*Note: Make sure to select Device support NETCONF, Skip SSH key validation for this device.*
+*Note: Make sure to select **"Device support NETCONF"** and **"Skip SSH key validation for this device"** since the device doesn't have a consistent SSH key.*
 
 
 Click on **Create Profile** when finished
 
->Create a new YANG module Repository
+>PLACEHOLDER FOR THE IMAGE
 
-* Click on the **YANG files and repositories** under the **Setup** menu on the left pane
+Once you have entered the information, you can click the **"Check Connectivity"** button.
 
-* Click on **New repository**
+>PLACEHOLDER FOR THE IMAGE
+
+### Download YANG models from the device
+
+> Create a new YANG module Repository
+
+From the menu at the left side of the page select **"Setup"** > **"YANG files and repositories"**.
+
+* Click on **"New repository"**
 
 * Enter the new repository name **"IOS XE Switching"**
 
-* Click on **Create repository**
+* Click on **"Create repository"**
+
+![](imgs/image5.png)
