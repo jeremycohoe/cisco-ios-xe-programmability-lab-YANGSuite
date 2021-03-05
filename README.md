@@ -163,7 +163,7 @@ From the menu at the left side of the page select **"Setup"** > **"YANG module s
 
 * Click on **"New YANG set"**.
 
-* Type in name for new YANG set **“IOS XE Switching – Cisco Native”**.
+* Type in name for new YANG set **“IOS XE - IETF”**.
 * Click on **"Create YANG set"**.
 
 ![](imgs/image7.png)
@@ -177,7 +177,7 @@ Now we will add YANG Modules to the newly created set.
 
 ![](imgs/image8.png)
 
-After you add selected YANG modules to the **IOS XE Switching-Cisco Native** set, click on **"Locate and add missing dependencies"** in the Missing dependencies box on the right side.
+After you add selected YANG modules to the **"IOS XE IETF"** set, click on **"Locate and add missing dependencies"** in the Missing dependencies box on the right side.
 
 
 ![](imgs/image9.png)
@@ -190,10 +190,10 @@ All the IOS XE Native modes are displayed in the box on the left.
 
 Now that we have a YANG model repository and have identified a YANG model subset of interest, let's explore the data model. From the menu at the left side of the page, select **"Explore" > "YANG"**.
 
-* Select **"IOS XE Switching – Cisco Native"** from the Select a YANG set drop down menu.
+* Select **"IOS XE - IETF"** from the Select a YANG set drop down menu.
 
-* Type **“interface”** in the **"Select YANG modules(s)"** box and select the **“Cisco-IOS-XE-interfaces-oper“** module.
-* Click on the **"Load module(s)"** button and expand the **“Cisco-IOS-XE-interfaces-oper”** module by clicking on the triangle on the left.
+* Type **“ietf”** in the **"Select YANG modules(s)"** box and select the **“ietf-interfaces“** module.
+* Click on the **"Load module(s)"** button and expand the **“ietf-interfaces”** module by clicking on the triangle on the left.
 
 After a moment, the left column will be populated with a tree view of the contents of this module. Initially the tree view shows only the module itself, but you can click the triangle icon next to it to expand the tree.
 
@@ -201,7 +201,7 @@ Go ahead and expand various parts of the tree.
 
 ![](imgs/image10.png)
 
-Two important pieces of YANG model metadata are the **Xpath** and the **Prefix**. These fields are used with Model Driven Telemetry to retrieve information with. If a telemetry subscription was to be created based on the IOS XE interfaces YANG data model, the **Xpath** of **“/interfaces/interface”** and **“interfaces-ios-xe-oper”** would be used to retrieve and publish information from those models.
+Two important pieces of YANG model metadata are the **Xpath** and the **Prefix**. These fields are used with Model Driven Telemetry to retrieve information with. If a telemetry subscription was to be created based on the IOS XE interfaces YANG data model, the **Xpath** of **“/interfaces/interface”** and **“ietf-interfaces”** would be used to retrieve and publish information from those models.
 
 ### Step 4: Build and send NETCONF messages
 
