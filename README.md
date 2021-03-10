@@ -187,9 +187,9 @@ All the IOS XE Native modes are displayed in the box on the left.
 
 Now that we have a YANG model repository and have identified a YANG model subset of interest, let's explore the data model. From the menu at the left side of the page, select **"Explore" > "YANG"**.
 
-* Click on the Explore menu and then YANG on the left pane
-* Select **"IOS XE Switching – Cisco Native"** from the Select a YANG set drop down menu.
-* Type **“interface”** in the Select YANG modules(s) box and select the **“Cisco-IOS-XE-interfaces-oper”** module.
+* Click on the **"Explore"** menu and then **"YANG"** on the left pane
+* Select **"IOS XE Switching – Cisco Native"** from the **"Select a YANG set"** drop down menu.
+* Type **“interface”** in the **"Select YANG modules(s)"** box and select the **“Cisco-IOS-XE-interfaces-oper”** module.
 * Click on the **"Load module(s)"** button and expand the **“Cisco-IOS-XE-interfaces-oper”** module by clicking on the triangle on the left.
 Refer to the screenshot to examine the structure of the model and its content
 
@@ -209,16 +209,16 @@ interfaces: NETCONF, RESTCONF, gNMI, and gRPC. This step uses the NETCONF
 programmatic interface:
 Using a NETCONF get-config RPC to modify device configuration
 
-* Click on the Protocols menu and then NETCONF on the left pane
+* Click on the **"Protocols"** menu and then **"NETCONF"** on the left pane
 
-* Select**"IOS XE Switching – Cisco Native"** module set from the **"Select a YANG set"** drop-down menu
+* Select **"IOS XE Switching – Cisco Native"** module set from the **"Select a YANG set"** drop-down menu
 * Type **"ietf-Interface"** in the Module(s) box, select the **"ietf-Interfaces"** module
 * Select the **"C9300"** from the drop-down list
 * Click on the **"Load Module(s)"** button
 
 We just want to get all configuration data about the Loopback interface on our device, so expand the YANG tree and click in the **"Value"** column next to the interfaces container to add a value – **“Loopback0”**
 
-*Note: Be sure not to put a space between "Loopback" and "0"!*
+*Note: Make sure not to put a space between "Loopback" and "0"!*
 
 ![](imgs/image11.png)
 
@@ -236,11 +236,16 @@ Just like that, you've built and sent a **NETCONF RPC!**
 
 #### Using a NETCONF <span style="color:#B73650; background-color:#F8F2F4;">edit-config</span> RPC to modify device configuration
 
-Inspecting the configuration is a good start, but we want to actually change the configuration - making our mark, as it were. First, click the **"Clear RPCs"** button to erase the RPC we just ran, as we don't need it right now. Then, switch the NETCONF operation to <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">edit-config</span>.
+Inspecting the configuration is a good start, but we want to actually change the configuration - making our mark, as it were.
+
+First, click on the YANG Tree drop down and select **“Clear Values and Operation”**.
+
+![](imgs/image19.png)
+
+Then click the **"Clear RPCs"** button to erase the RPC we just ran, as we don't need it right now. Then, switch the NETCONF operation to <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">edit-config</span>.
 
 ![](imgs/image14.png)
 
-![](imgs/image19.png)
 
 We're going to set the description on the **Loopback interface** to show that we were here.
 
