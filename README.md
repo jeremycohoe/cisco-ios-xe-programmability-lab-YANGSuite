@@ -236,7 +236,7 @@ Just like that, you've built and sent a **NETCONF RPC!**
 
 #### Using a NETCONF <span style="color:#B73650; background-color:#F8F2F4;">edit-config</span> RPC to modify device configuration
 
-Inspecting the configuration is a good start, but we want to actually change the configuration - making our mark, as it were.
+Inspecting the configuration is a good start, but we want to actually change the configuration - making our mark.
 
 First, click on the YANG Tree drop down and select **“Clear Values and Operation”**.
 
@@ -265,9 +265,12 @@ Now click **"Run RPC(s)"** again, and a new window will open showing the **NETCO
 
 Next, let's add a targeted <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">get-config</span> RPC to check that our configuration change actually took effect.
 
-First, click the **"Clear RPCs"** and **"Clear Values and Operations"** buttons to erase the RPC we just ran, as we don't need it right now. Then change the NETCONF Operation to <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">get-config</span>, make sure the <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">running</span> datastore is selected, and enter **"Loopback0"** value as the leaf name to get-config operation.
+First, click the **"Clear RPCs"** and **"Clear Values and Operations"** buttons to erase the RPC we just ran, as we don't need it right now.
 
 ![](imgs/image19.png)
+
+Then change the NETCONF Operation to <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">get-config</span>, make sure the <span style="color:#B73650; font-weight:bold; background-color:#F8F2F4;">running</span> datastore is selected, and enter **"Loopback0"** value as the leaf name to get-config operation.
+
 ![](imgs/image17.png)
 
 
