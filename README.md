@@ -170,15 +170,11 @@ From the menu at the left side of the page select **"Setup"** > **"YANG module s
 
 Now we will add YANG Modules to the newly created set.
 
-* In the box on the right, filter for **“Cisco-IOS-XE”** native modules.
 * Click on **"Add entire repository"**
 
 ![](imgs/image8.png)
 
-After you add selected YANG modules to the **"IOS XE Switching – Cisco Native"** set, click on **"Locate and add missing dependencies"** in the Missing dependencies box on the right side.
-
-
-![](imgs/image9.png)
+*Note: It might take some time to dowload the whole repository!*
 
 YANG Suite automatically runs a validation check to make sure all the modules dependencies are met and provides an automatic remediation in case some dependencies are missing.
 All the IOS XE Native modes are displayed in the box on the left.
@@ -200,7 +196,7 @@ Go ahead and expand various parts of the tree:
 
 ![](imgs/image10.png)
 
-Two important pieces of YANG model metadata are the **Xpath** and the **Prefix**. These fields are used with Model Driven Telemetry to retrieve information with. If a telemetry subscription was to be created based on the IOS XE interfaces YANG data model, the **Xpath** of **“/interfaces/interface”** and **“ietf-interfaces”** would be used to retrieve and publish information from those models.
+Two important pieces of YANG model metadata are the **Xpath** and the **Prefix**. These fields are used with Model Driven Telemetry to retrieve information with. If a telemetry subscription was to be created based on the IOS XE interfaces YANG data model, the **Xpath** of **“/interfaces/interface/interface-type”** and **“interfaces-ios-xe-oper”** would be used to retrieve and publish information from those models.
 
 ### Step 4: Build and send NETCONF messages
 
