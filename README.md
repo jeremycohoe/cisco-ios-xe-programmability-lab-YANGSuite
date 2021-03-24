@@ -179,6 +179,8 @@ Now we will add YANG Modules to the newly created set.
 YANG Suite automatically runs a validation check to make sure all the modules dependencies are met and provides an automatic remediation in case some dependencies are missing.
 All the IOS XE Native modes are displayed in the box on the left.
 
+*Note: You might notice the Module validation errors and warnings in the right box. The following modules are throwing the error message just because we have downloaded the whole repository*
+
 ### Step 3: Explore YANG Models
 
 Now that we have a YANG model repository and have identified a YANG model subset of interest, let's explore the data model. From the menu at the left side of the page, select **"Explore" > "YANG"**.
