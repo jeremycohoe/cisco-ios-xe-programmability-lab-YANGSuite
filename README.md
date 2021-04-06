@@ -2,7 +2,7 @@
 
 YANG Suite was publicly released onto Github and the landing page is found within DevNet at  https://github.com/CiscoDevNet/yangsuite
 
-YANG Suite provides a YANG API testing and validation envrionment that supports NETCONF, RESTCONF, gNMI, and gRPC.
+YANG Suite provides a YANG API testing and validation envrionment that supports NETCONF, RESTCONF, gNMI, and gRPC Telemetry
 
 ## Module Topics:
 
