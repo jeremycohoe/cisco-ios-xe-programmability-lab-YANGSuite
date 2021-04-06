@@ -1,20 +1,8 @@
-# YANG Suite core Django application.
+# YANG Suite 
 
-Capable of dynamic discovery of installed application plugins. Provides common library APIs for logging, filesystem access, GUI appearance and behavior, and client-server communication.
+YANG Suite was publicly released onto Github and the landing page is found within DevNet at  https://github.com/CiscoDevNet/yangsuite
 
-Authors: Members of the Cisco YANG Suite development team.
-Supports: Python 3.6, Python 3.7, Python 3.8
-YANG Suite can be installed as a Docker container or through Python package management. Docker-compose is the recommended install.
-
-Requires about 3.5GB of memory to load large Cisco native models.
-
-Refer to this page for the YANG Suite installation guidance https://github.com/CiscoDevNet/yangsuite
-
-Background
-
-IOS XE Release: 17.3
-
-
+YANG Suite provides a YANG API testing and validation envrionment that supports NETCONF, RESTCONF, gNMI, and gRPC.
 
 ## Module Topics:
 
