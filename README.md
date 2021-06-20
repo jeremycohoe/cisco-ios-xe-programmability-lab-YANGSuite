@@ -251,3 +251,7 @@ This is another very basic example of using the YANG Suite gNMI plugin to retrei
 ## Conclusion
 
 In this module the new capabilities of the **YANG Suite** tooling was used to explore the RESTCONF and gNMI programmatic interfaces within IOS XE
+
+Please mark this module complete in the following SmartSheet form and be sure to include your name, e-mail ID, and pod #
+
+https://app.smartsheet.com/b/form/134240eac2d84a57acd4efc24fd8f3d0
