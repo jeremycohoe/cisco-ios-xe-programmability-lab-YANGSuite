@@ -246,6 +246,10 @@ gNMI Response value decoded
 ]
 ```
 
+The completed workflow should look similar to the following
+
+![](imgs/gnmi-build.gif)
+
 This is another very basic example of using the YANG Suite gNMI plugin to retreive operational information from the IOS XE device
 
 ## Conclusion
