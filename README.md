@@ -130,6 +130,11 @@ In the "Nodes" section, expand the YANG data model "Cisco-IOS-XE-interfaces-oper
 
 The payload that is generated when selecting the **Build JSON** button should look identical to below:
 
+**NOTE:**  if the "Build JSON" button does not create the JSON payload then you may be hitting defect CSCvy80488. To work around this simply restart the yangsuite docker container, refresh the browser, and then re-start the workflow to load the YANG model and build the payload.
+
+To restart the YANGsuite docker container send the following command from the linux shell: **docker restart yangsuite**
+
+
 ```
 path {
   origin: "rfc7951"
